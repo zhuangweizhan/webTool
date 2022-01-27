@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="../js/jquery-2.1.3.min.js" ></script> 
+</head>
+
+<body>
+    <p>小程序代码在线转换h5</p>
+    <div class="box">
+        <div class="box_left">
+            <textarea id="textarea"></textarea>
+        </div>
+        <div class="box_center">
+            <div>
+                <button type="button" onclick="change()">转换</button>
+            </div>
+        </div>
+        <div class="box_right">
+            <div id="right" disabled></div>
+        </div>
+
+    </div>
+
+    <!-- 例子 -->
+    <script>
+        function change() {
+            const value = $("#textarea").val();
+            $.ajax({
+                url: "/changeMiniToH5",
+                data: { value: value, },
+                type: "post",
+                success: function (msg) {
+                    document.getElementById("right").innerText = msg.result;
+                }, error: function () {
+                    // alert("请求失败，请联系管理员！");
+                }
+            });
+        }
+
+    </script>
+
+    <style>
+        .box {
+            display: flex;
+        }
+
+        .box_left {
+            flex: 1;
+            height: 80vh;
+        }
+
+        .box_center {
+            flex: 0.2;
+            text-align: center;
+        }
+
+        .box_right {
+            overflow: hidden;
+            height: 80vh;
+            overflow-y: auto;
+            border: 1px solid #333333;
+            flex: 1;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</body>
+
+</html>

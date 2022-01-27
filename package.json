@@ -1,0 +1,43 @@
+{
+  "name": "test_koa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www LIMIT=8192 increase-memory-limit",
+    "start2": "node bin/www --max-old-space-size=8192 ",
+    "dev": "./node_modules/.bin/nodemon bin/www LIMIT=8192 increase-memory-limit",
+    "prd": "node bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/generator": "^7.10.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/traverse": "^7.10.5",
+    "babel-extract-comments": "^1.0.0",
+    "babel-loader": "^8.2.2",
+    "babylon": "^6.18.0",
+    "connect-timeout": "^1.9.0",
+    "debug": "^2.6.3",
+    "escodegen": "^2.0.0",
+    "esprima": "^4.0.1",
+    "estraverse": "^5.2.0",
+    "htmlparser2": "^6.1.0",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "request": "^2.88.2",
+    "sync-request": "^6.1.0",
+    "template-parser": "^1.0.0"
+  },
+  "devDependencies": {
+    "increase-memory-limit": "^1.0.6",
+    "nodemon": "^1.8.1"
+  }
+}
