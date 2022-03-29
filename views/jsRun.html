@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="../js/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+    <textarea name="t11" id="t11" rows="12" cols="95">
+        <!--里面写要运行的代码开始-->
+        <!--里面写要运行的代码结束-->
+        </textarea>
+    <br>
+    <input type="button" value="运行代码"
+        style="border-left:1px solid #B1B4CD;border-right:1px solid #494D74;border-top:1px solid #B1B4CD;;border-bottom:1px solid #494D74;background:#696D81;color:#FFFFFF;"
+        onClick="runCode(document.getElementById('t11'))">
+    <script language="javascript">
+        function runCode(obj) {
+            var winname = window.open('', "_blank", '');
+            winname.document.open('text/html', 'replace');
+            winname.opener = null // 防止代码对论谈页面修改
+            winname.document.write(obj.value);
+            winname.document.close();
+        }
+    </script>
+</body>
+
+</html>

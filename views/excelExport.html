@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EXECL数据导出</title>
+    <meta charset="utf-8">
+    <script src="../js/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+    <div id="body">
+        <div class="head">excel导出, 请选择导出文件</div>
+        <div class="select_box" id="select_box"></div>
+        <div class="content">
+            <input type="file" id="file" value="" />
+            <div id="grid"></div>
+            <div id="result" style="margin-top: 50px" class=""></div>
+        </div>
+        <script src="../js/xlsx.full.min.js"></script>
+        <script src="../js/myExcalSheet.js?v=5"></script>
+        <script src="../js/myExcalSheet_____Shop.js"></script>
+        <!--门店文档-->
+        <script src="../js/clipboard.min.js"></script>
+        <script src="../js/prefixfree.min.js"></script>
+    </div>
+
+    <style>
+        .head {
+            margin-top: 150px;
+            text-align: center;
+            color: #50bfe9;
+            font-size: 40px;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 50px;
+            clear: both;
+        }
+
+        .content input {
+            border: 1px solid #2c2c2c;
+        }
+
+        .btn {
+            font-size: 13px;
+            background-color: #0099dd;
+            width: 8vw;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            border-radius: 20px;
+            margin-left: 46vw;
+            margin-top: 20px;
+        }
+
+        .copyBtn {
+            border: none;
+            background-color: #0099dd;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 2px;
+        }
+
+        .select_box {
+            overflow: hidden;
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</body>
+
+</html>

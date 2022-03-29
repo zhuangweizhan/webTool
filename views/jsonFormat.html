@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="../css/json.css">
+    <script src="../js/jsonParse.js"></script>
+    <script src="../js/inone.js"></script>
+
+<body>
+    <div class="json-empty">
+        <div id="header" class="a" style="text-align:center;">
+            <div class="c">
+                <div class="n b">
+                    <div class="j g h">
+                        <div class="e d on" id="yM">左右模式</div>
+                        <div class="f"></div>
+                        <div class="e" id="gV">解析JSON</div>
+                        <div class="e" id="jY">执行JSON</div>
+                        <div class="f"></div>
+                        <div class="e" id="zN">压缩</div>
+                        <div class="e on" id="cR">着色</div>
+                        <div class="e" id="bQ">显示JS类型</div>
+                        <div class="e" id="aP">显示数组索引</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="split" class="N I" style="height: 151px; top: 39px;"><textarea class="J x P" id="eT" spellcheck="false"
+                style="height: 139.667px; width: 624.667px;"></textarea>
+            <div class="M ui-draggable" style="left: 656px;"></div>
+            <div class="K F color" id="fU" style="100%">
+                <div class="y Q">
+                    <div class="C A" id="hW" style="width: 496px;">准备就绪</div>
+                    <div class="C B" id="kZ">&nbsp;</div>
+                </div>
+                <div class="z L" style="height: 113.667px;">
+                    <div class="E" id="dS">
+                        <div class="C A" style="width: 496px;float:left">
+                            <div class="w">
+                                <div class="P" id="iX"></div>
+                            </div>
+                        </div>
+                        <div class="C B" style="width: 495px;">
+                            <div class="w D">
+                                <div class="P" id="lA"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("#eT").dblclick(function (e) {
+            jsonVal = jsl.format.formatJson($('#eT').val());
+            $('#eT').val(jsonVal);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
- <head> 
-  <meta charset="UTF-8" /> 
-  <title>前端工具</title> 
-  <meta name="copyright" content="" /> 
-  <link href="./css/main.css" rel="stylesheet" /> 
-  <script src="./js/utils.js" ></script> 
-  <script src="./js/jquery-2.1.3.min.js" ></script> 
- </head> 
- <body> 
-	<div class="bg" ></div>
-    <div class="content" >
-		<div class="c_title" >
+
+<head>
+	<meta charset="UTF-8" />
+	<title>前端工具</title>
+	<meta name="copyright" content="" />
+	<link href="./css/main.css" rel="stylesheet" />
+	<script src="./js/utils.js"></script>
+	<script src="./js/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+	<div class="bg"></div>
+	<div class="content">
+		<div class="c_title">
 			<a class="c_title_a" href="https://juejin.cn/user/4195392104696519">掘金：逐步前行</a>
 		</div>
-		<div class="c_tag" id="tag_list" >
-			
+		<div class="c_tag" id="tag_list">
+
 		</div>
 		<div class="c_iframe">
 			<iframe id="mainContent" width="100%" style="height:90vh;"></iframe>
@@ -23,24 +25,64 @@
 	</div>
 	<script>
 		var list = [
-				{
-					"name":"小程序转H5",
-					"path": "page/babelMinToH5",
-				},
-			
+			{
+				"name": "json在线格式化",
+				"path": "page/jsonFormat",
+			},
+			{
+				"name": "css在线格式化",
+				"path": "page/cssFormat",
+			},
+			{
+				"name": "excel在线转换json",
+				"path": "page/excelExport",
+			},
+			{
+				"name": "颜色转换器",
+				"path": "page/colorFormat",
+			},
+			{
+				"name": "图片在线剪切",
+				"path": "page/imageFormat",
+			},
+			{
+				"name": "在线客户端信息",
+				"path": "page/customerMessage",
+			},
+			{
+				"name": "在线md5加解密",
+				"path": "page/md5",
+			},
+			{
+				"name": "在线aes加解密",
+				"path": "page/aes",
+			},
+			{
+				"name": "在线rsa加解密",
+				"path": "page/rsa",
+			},
+			{
+				"name": "在线urlDecode",
+				"path": "page/urlDecode",
+			},
+			{
+				"name": "小程序转H5",
+				"path": "page/babelMinToH5",
+			},
+
 		]
 		initPage();
-		
-		function initPage(){
+
+		function initPage() {
 			var index = uGetParameter("index");
-			if ( index == "" || index == undefined || index == null ){
+			if (index == "" || index == undefined || index == null) {
 				index = 0;
 			}
 			index = parseInt(index);
-		
+
 			var str = "";
-			for( var i=0;i<list.length;i++ ){
-				if( i == index ){
+			for (var i = 0; i < list.length; i++) {
+				if (i == index) {
 					str += '<div class="t_one t_active" onclick="selectTag(' + i + ')" >' + list[i].name + '</div>'
 				} else {
 					str += '<div class="t_one" onclick="selectTag(' + i + ')"  >' + list[i].name + '</div>'
@@ -49,23 +91,24 @@
 			$("#tag_list").html(str);
 			selectTag(index);
 		}
-		
-		function selectTag( i ){
+
+		function selectTag(i) {
 			i = parseInt(i);
 			$("#tag_list").find(".t_one").removeClass("t_active");;
 			$("#tag_list").find(".t_one").eq(i).addClass("t_active");;
 			var mainContent = $("#mainContent")
-			mainContent.attr("src", list[i].path );//嵌套网址
+			mainContent.attr("src", list[i].path);//嵌套网址
 		}
-		
-		
+
+
 	</script>
 
 	<style>
-		.c_title_a{
-			color: #0c40f2;
-    		text-decoration: none;
+		.c_title_a {
+			color: #3452ba;
+			text-decoration: none;
 		}
 	</style>
- </body>
+</body>
+
 </html>

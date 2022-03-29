@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人颜色选择器</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/color.css">
+<link href="../css/bootstrap-colorpicker.css" rel="stylesheet">
+<style type="text/css">
+	.colorpicker-component{margin-top: 10px;}
+</style>
+
+</head>
+<body>
+	<p style="text-align: center;font-size: 28px;margin-top: 40px;">颜色选择器</p>
+	<div class="zzsc-container">
+		<div class="container" style="padding:2.5em 0;">
+			  <h3>为颜色拾取器设置初始颜色</h3>
+			  <div id="cp2" class="input-group colorpicker-component" title="Using input value">
+			  <input type="text" class="form-control input-lg" value="#DD0F20"/>
+			  <span class="input-group-addon"><i></i></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="../js/jquery-2.1.3.min.js"></script>
+	<script src="../js/bootstrap-colorpicker.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#cp2, #cp3a, #cp3b').colorpicker();
+		});
+	</script>
+</body>
+</html>

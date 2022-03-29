@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <title>url加密</title>
+
+<body>
+    <center>
+        <h3>url编码</h3>
+        <div class="list">
+            <div class="l_fri">
+                <textarea id='input' spellcheck="false">请输入你需要加密的文本</textarea>
+            </div>
+
+            <div class="l_sec">
+                <div class="s_one">
+                    <input class="o_input" type="button" value="decode" onclick='decode()'>
+                    <input class="o_input" type="button" value="encode" onclick='encode()'>
+                </div>
+            </div>
+            <div class="l_thi">
+                <textarea class="t_cont" id="output" disabled></textarea>
+            </div>
+        </div>
+    </center>
+    <script type="text/javascript">
+
+        function decode(word) {
+            var word = $("#input").val();
+            var result = decodeURIComponent(word);
+            $("#output").val(result);
+        }
+
+        function encode(word) {
+            var word = $("#input").val();
+            console.log("word===", word);
+            var result = encodeURIComponent(word);
+            console.log("result===", result);
+            $("#output").val(result);
+        }
+
+    </script>
+    <style>
+        .list {
+            display: flex;
+            padding: 10px
+        }
+
+        .list .l_fri {
+            display: inline-flex;
+            flex: 5
+        }
+
+        .list .l_fri textarea {
+            width: 100%;
+            height: 700px;
+            font: 12px/1.6em 'Lucida Console', 'monospace', 'Consolas';
+            letter-spacing: 1px
+        }
+
+        .list .l_sec {
+            flex: 1
+        }
+
+        .list .l_sec .s_one {
+            width: 100%;
+            margin: 20px 0
+        }
+
+        .list .l_sec .s_one .o_input {
+            width: 100px
+        }
+
+        .list .l_thi {
+            display: inline-flex;
+            flex: 5
+        }
+
+        .list .l_thi .t_cont {
+            background: #ece8e8;
+            height: 700px;
+            width: 100%
+        }
+    </style>
+</body>
+
+</html>

@@ -1,55 +1,54 @@
-  body {
-	margin:0;
-  }
-  .bg{
-	background:url('http://3.nanfengkeji.applinzi.com/images/wallpaper3.jpg') 100% 100%;
-	background-size:  100% 100%;
-	width: 100vw;
-	height: 100vh;
-	position:fixed;
-	z-index: 1;
-  }
-  .content{
-	z-index:2;
-	position:absolute;
-	width: 100%;
-	}
-  .content .c_title{
+body {
+  margin: 0;
+}
+.bg {
+  background: url('http://3.nanfengkeji.applinzi.com/images/wallpaper3.jpg') 100% 100%;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+}
+.content {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+}
+.content .c_title {
   text-align: center;
   font-size: 26px;
   color: #40a0e6;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-  }
-    .content .c_title .t_img{
-	width: 150px;
-	height: 70px;
-	}
-  .content .c_title .t_span{
-	
-  }
-  .content .c_tag{
-	display: flex;
-	justify-content: center;
-	}
-  .content .c_tag .t_one{
-	display: flex;
-	width: 133px;
-	align-items: center;
-	font-size: 15px;
-	justify-content: center;
-	padding-bottom: 10px;
-	}
-	.content .c_tag .t_active{
-		color: #40a0e6;
-		border-bottom: 1px solid #40a0e6;
-		text-align: center;
-	}
-	.content .c_iframe{
-		margin: 0 auto;
-		margin-top: 30px;
-		min-height: 100vh;
-		background-color: white;
-	}
+  margin: 30px 0;
+}
+.content .c_title .t_img {
+  width: 150px;
+  height: 70px;
+}
+.content .c_title .t_span {
+}
+.content .c_tag {
+  display: flex;
+  justify-content: center;
+}
+.content .c_tag .t_one {
+  display: flex;
+  width: 133px;
+  align-items: center;
+  font-size: 15px;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.content .c_tag .t_active {
+  color: #40a0e6;
+  border-bottom: 1px solid #40a0e6;
+  text-align: center;
+}
+.content .c_iframe {
+  margin: 0 auto;
+  margin-top: 30px;
+  min-height: 100vh;
+  background-color: white;
+}
